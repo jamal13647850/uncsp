@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>6th Practice - BMI</title>
+    <script>
+
+      const bodyMass=()=>{
+        let height = document.getElementById("Height").value;
+        let heightToMeter = height/100;
+        let weight = document.getElementById("Weight").value;
+        let bodyMass = (weight/(Math.pow(heightToMeter, 2)));
+        console.log(bodyMass);
+        let message ;
+        message = "لطفا اطلاعات فرم را به درستی پر نمایید.";
+        if (document.getElementById('woman').checked) {
+          if(bodyMass<=16){
+            message="بانوی محترم شما کمبود وزن شدیدی دارید";
+          }
+          if(bodyMass>=16.1 && bodyMass<=20){
+            message="بانوی محترم شما کمبود وزن غیر خطرناکی دارید";
+          }
+          if(bodyMass>=20.1 && bodyMass<=25){
+            message="بانوی محترم وزن شما در محدوده طبیعی قرار دارد";
+          }
+          if(bodyMass>=25.1){
+            message="من را ببخشید ولی شما دچار چاقی هستید بانوی محترم";
+          }
+        }
+        else{
+          if(bodyMass<=18){
+            message="آقای محترم شما کمبود وزن شدیدی دارید";
+          }
+
+          if(bodyMass<=18.1 && bodyMass<=22){
+            message="آقای محترم شما کمبود وزن غیر خطرناکی دارید";
+          }
+
+          if(bodyMass>=22.1 && bodyMass<=28){
+            message="آقای محترم وزن شما در محدوده طبیعی قرار دارد";
+          }
+
+          if(bodyMass>=28.1){
+            message="آقای محترم شما دچار چاقی هستی";
+          }
+        }
+
+        alert(message);
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+    <div style="display:block;border:1px solid red;margin:100px auto;max-width:300px;padding:20px;">
+      <lable>
+  Height
+      </lable>
+      <input type="number" name="numtype" id="Height" style="margin-bottom:20px;" required>CM<br>
+
+      <lable>
+  Weight
+      </lable>
+      <input type="number" name="numtype" id="Weight" style="margin-bottom:20px;" required>KG<br>
+
+Gender
+  <label for="man">
+    <input type="radio" name=gender value=man id="man" checked/>Man
+  </label>
+  <label for="woman">
+    <input type="radio" name=gender value=woman id="woman" style="margin-bottom:20px;" />Woman
+  </label>
+
+
+
+</br>
+      <button type="submit" name="button" onclick="bodyMass()">Click For Calculate Your Body Mass</button>
+    </div>
+
+
+  </body>
+</html>
