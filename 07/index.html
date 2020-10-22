@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>7th Practice - Arrays</title>
+    <script>
+
+      const arrayOddOrEven=()=>{
+          var mainNumber = new Array();
+          var oddNumber = new Array();
+          var evenNumber = new Array();
+
+          for (let i=1; i<=10; i++) {
+             mainNumber.push(i);
+           }
+           alert(mainNumber);
+
+           for (let j=1; j<10; j++) {
+              if(mainNumber.pop() % 2 === 0) {
+                oddNumber.push(j);
+              }
+              else{
+                evenNumber.push(j);
+              }
+            }
+
+            alert(oddNumber);
+
+            alert(evenNumber);
+      }
+
+
+
+    </script>
+  </head>
+  <body>
+    <script>
+      arrayOddOrEven();
+
+    </script>
+
+
+  </body>
+</html>
