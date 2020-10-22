@@ -13,8 +13,8 @@
            }
            alert(mainNumber);
 
-           for (let j=1; j<10; j++) {
-              if(mainNumber.pop() % 2 === 0) {
+           for (let j=1; j<=10; j++) {
+              if(mainNumber.shift() % 2 === 0) {
                 oddNumber.push(j);
               }
               else{
