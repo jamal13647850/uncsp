@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>8th Practice - Arrays Sort</title>
+    <script>
+      let Sentence=prompt("Please enter your sentence:");
+      let arrSentence=new Array();
+      const convertToarray=()=>{
+        arrSentence = Sentence.split(" ");
+        alert(arrSentence)
+      }
+
+      const sortArray=()=>{
+        arrSentence.sort();
+        alert(arrSentence);
+      }
+
+      let newArrSentence=new Array();
+      function okFunc(value) {
+        let patt = /[d-tD-T]/i;
+        let result = value[0].match(patt);
+        if(result){
+          newArrSentence.push(value);
+        }
+
+      }
+      const DtoT=()=>{
+        arrSentence.forEach(okFunc);
+        alert(newArrSentence);
+      }
+
+    </script>
+  </head>
+  <body>
+    <script>
+
+
+    </script>
+
+    <input type=button name=start value=Start onclick="convertToarray()">
+    <input type=button name=sort  value=Sort  onclick="sortArray()">
+    <input type=button name=ok    value=Ok    onclick="DtoT()">
+  </body>
+</html>
