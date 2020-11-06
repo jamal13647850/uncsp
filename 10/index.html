@@ -2,16 +2,34 @@
   <head>
     <title>10th Practice - Simple login system simulator</title>
     <script>
-
+      let loginError = 0 ;
+      const login = ()=>{
+        let username = (document.getElementById("username").value).toUpperCase();
+        let password = document.getElementById("password").value;
+        if(username==="ALI" && password==="123"){
+          alert("Your login information is correct.");
+        }
+        else{
+          alert("Your login information is incorrect !!!");
+          loginError++;
+        }
+        loginError>=3?alert("Unfortunately, you entered incorrect information more than three times"):'';
+        return false;
+      }
 
     </script>
   </head>
   <body>
-    <script>
-
-
-    </script>
-
-
+    <form method="post" action="" onsubmit="return login()">
+      <label for="username">User name:</label>
+      <input name="username" id="username"></input>
+      <br><br><br>
+      <label for="password">Password:</label>
+      <input name="password" id="password"></input>
+      <br><br><br>
+      <input type="submit" value="Login">
+      <input type="reset" value="Empty form fields">
+    </form>
+    
   </body>
 </html>
