@@ -2,8 +2,21 @@
   <head>
     <title>9th Practice - Word Counter</title>
     <script>
+      const count=()=>{
+          let sentence = document.getElementById("sentence").value;
+          if(sentence===""){
+            alert("You did not enter a sentence !!!");
+          }
+          else{
+            alert(`The number of words in your sentence is ${sentence.trim().split(' ').length}."`);
+          }
+      }
 
-
+      const find=()=>{
+        let sentence = document.getElementById("sentence").value;
+        let character = document.getElementById("character").value;
+        alert(`The number of character in your sentence is ${sentence.split(character).length - 1}."`);
+      }
     </script>
   </head>
   <body>
@@ -11,7 +24,12 @@
 
 
     </script>
-
-
+      <label for="sentence">Please enter your sentence here:</label>
+      <input name="sentence" id="sentence"></input>
+      <button id="count" onclick="count()">Start counting words</button>
+      <hr style="margin:30px 0 30px 0">
+      <label for="character">Please enter your character here:</label>
+      <input name="character" id="character" max-length="1"></input>
+      <button id="find" onclick="find()">Finding character</button>
   </body>
 </html>
