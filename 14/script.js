@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const end = 19 * 60 + 30;
   //december=11
   if (month!=11 && !(now>=start && now<=end)) {
-    alert("خطا! \n ساعت سیستم بین ۱۷:۳۰ تا ۱۹:۳۰ نیست")
+    alert("خطا! \n ساعت سیستم بین ۱۷:۳۰ تا ۱۹:۳۰ نیست \n ماه نیز دسامبر نیست");
   }
 
   let okbtn=document.getElementById("ok");
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       let minute = date.getMinutes();
       const now = hour * 60 + minute;
       if (month!=11 && !(now>=start && now<=end)) {
-        alert("خطا! \n ساعت سیستم بین ۱۷:۳۰ تا ۱۹:۳۰ نیست")
+        alert("خطا! \n ساعت سیستم بین ۱۷:۳۰ تا ۱۹:۳۰ نیست \n ماه نیز دسامبر نیست");
       }
     },2000)
   })
